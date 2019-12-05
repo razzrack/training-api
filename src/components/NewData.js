@@ -47,7 +47,6 @@ class NewData extends React.Component {
         e.preventDefault();
         const url = "http://localhost:3001/api/employees/";
         const headers = {
-            'Content-Type': 'application/x-www-form-urlencoded',
             'Authorization': getJwt()  
         };
         axios.post(url+ '2', {

@@ -43,7 +43,7 @@ class Profil extends React.Component {
             'Authorization': getJwt()  
         };
         axios.post('http://localhost:3001/api/employees/4', {
-            emp_id: "19003",
+            emp_id: this.state.emp_id,
             emp_role: "Peserta",
             emp_name: this.state.emp_name,
             emp_department: this.state.emp_department,
@@ -108,9 +108,9 @@ class Profil extends React.Component {
                                 name="emp_id"
                                 id="data-input"
                                 placeholder="NIP"
-                                value="19003"
+                                value={this.state.emp_id}
                                 onChange={this.change.bind(this)}
-                            disabled />
+                            />
                         </FormGroup>
                         <FormGroup>
                             <Input

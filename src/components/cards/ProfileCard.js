@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  Card, CardImg, CardText,
+  Button, Card, CardImg, CardText,
   CardTitle, CardSubtitle, Row, Col
 } from 'reactstrap';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import user from '../img/user.png';
 
 export default class TrainerCard extends React.Component {
@@ -12,7 +12,6 @@ export default class TrainerCard extends React.Component {
     this.state = {
         modal: false
       };
-  
       this.toggle = this.toggle.bind(this);
   }
 
@@ -23,7 +22,7 @@ export default class TrainerCard extends React.Component {
   }
   
   render() {
-    let { emp_name, emp_department, emp_division } = this.props.pela;
+    // let { emp_name, emp_department, emp_division } = this.props.pela;
     return (
     <Row>
         <Col>
@@ -33,21 +32,21 @@ export default class TrainerCard extends React.Component {
                     <Row>
                       <Col>
                         <CardTitle>
-                        <Link onClick={this.toggle}>{this.state.emp_name}</Link></CardTitle>
+                        <Link onClick={this.toggle}>Nama</Link></CardTitle>
                       </Col>
                     </Row>
                     <Row>
                       <Col>
-                        <CardSubtitle>{this.state.emp_department}</CardSubtitle>
+                        <CardSubtitle>Dept</CardSubtitle>
                       </Col>
                       <Col>
-                      <CardSubtitle>{this.state.emp_division}</CardSubtitle>
+                      <CardSubtitle>Div</CardSubtitle>
                       </Col>
                     </Row>
                 </Card>
                 <Card body className="text-center">
-                    <CardTitle>Acara yang akan datang : </CardTitle>
-                    {/* <CardText>{namaMateri} <br/> {jenisMateri}</CardText> */}
+                    <CardTitle>Ajukan Proposal Dengan Klik Dibawah ini</CardTitle>
+                    <Link to="/proposals">Ajukan</Link>
                 </Card>
             </Card>
         </Col>

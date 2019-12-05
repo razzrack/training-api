@@ -20,7 +20,7 @@ class Trainers extends React.Component {
     }
 
     componentDidMount() {
-        const url = 'http://localhost:3001/api/employees/Trainer'
+        const url = 'http://localhost:3001/api/employees'
         axios.get(url).then(response => response.data)
         .then((data) => {
             this.setState({ trainers: data })

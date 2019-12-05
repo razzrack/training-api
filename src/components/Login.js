@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Button, ButtonGroup, Label,
     ListGroup, ListGroupItem, Form, FormGroup, Input } from 'reactstrap';
-    import { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 class Login extends React.Component {
     constructor(props) {

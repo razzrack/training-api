@@ -6,12 +6,15 @@ import Trainer from './Trainer';
 import TrainerAuth from './Trainers';
 import Event from './Event';
 import EventAuth from './Events';
+import DetailEvent from './DetailEvent';
 import Profil from './Profil';
 import Auth from './Auth';
 import Data from './Data';
 import NewData from './NewData';
+import Trainee from './Trainee';
 import About from './About';
 import AboutAuth from './Abouts';
+import Proposal from './Proposal';
 
 class App extends React.Component {
   render() {
@@ -28,6 +31,9 @@ class App extends React.Component {
           <Route path={'/newdata'} component={NewData} />
           <Route path={'/trainers'} component={TrainerAuth}/>
           <Route path={'/events'} component={EventAuth}/>
+          <Route path={'/eventdet'} component={DetailEvent}/>
+          <Route path={'/proposals'} component={Proposal}/>
+          <Route path={'/trainees'} component={Trainee}/>
           <Route path={'/abouts'} component={AboutAuth}/>
           <Route path={'/profile'} component={Profil}/>
         </Auth>

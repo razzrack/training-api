@@ -43,7 +43,7 @@ class EventCard extends React.Component {
               <p>{deskripsi}</p> */}
             </ModalBody>
           <ModalFooter>
-            
+              <Link to="/trainees">Daftar Menjadi Peserta</Link>
           </ModalFooter>
         </Modal>
     </div>

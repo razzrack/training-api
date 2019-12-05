@@ -15,7 +15,8 @@ class Events extends React.Component {
     constructor(){
         super();
         this.state = {
-            events: []
+            events: [],
+            pelatih: []
         }   
     }
 
@@ -71,7 +72,7 @@ class Events extends React.Component {
                                 </Row>
                             </Col>
                             <Col sm={3}>
-                                {/* {profileCard} */}
+                                <ProfileCard />
                             </Col>
                         </Row>
                     </Container>
