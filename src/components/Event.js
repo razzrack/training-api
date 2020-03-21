@@ -6,10 +6,8 @@ import { FormGroup, Input, Container, Jumbotron, Row, Col,
     CardBody, CardTitle, CardText,
     Button, Label,
     ListGroup, ListGroupItem, Form } from 'reactstrap';
-import Header from './Header';
 import Footer from './Footer';
-import MateriCard from './cards/EventCard';
-import ProfileCard from './cards/ProfileCard';
+import EventCard from './cards/EventCard';
 
 class Event extends React.Component {
     constructor(){
@@ -29,10 +27,10 @@ class Event extends React.Component {
     }
 
     render() {
-        let materiCard = this.state.events.map(event => {
+        let eventCard = this.state.events.map(event => {
             return (
                 <Col>
-                    <MateriCard event={event} />
+                    <EventCard event={event} />
                 </Col>
             )
         })
@@ -45,35 +43,35 @@ class Event extends React.Component {
         // })
         return (
             <div>
-                <Header/>
                 <Jumbotron fluid>
                     <Container fluid>
                     <Row>
-                            <Col md={9}>
-                                <Row className="ml-5">
-                                    <Col>
-                                        <h3>Acara Pelatihan</h3>
-                                    </Col>
-                                </Row>
-                                <Row form className="ml-4 mt-2">
-                                    <Col md={4}>
-                                        <FormGroup>
-                                            {/* <Input type="search"
-                                                name="searchTrainer"
-                                                id="searchTrainer"
-                                                placeholder="Cari Trainer"
-                                                className="ml-5 mb-2 mr-sm-2 mb-sm-0"/> */}
-                                        </FormGroup>
-                                    </Col>
-                                </Row>
-                                <Row className="ml-5 mt-2">
-                                    {materiCard}
-                                </Row>
-                            </Col>
-                            <Col sm={3}>
-                                {/* {profileCard} */}
-                            </Col>
-                        </Row>
+                        <Col md={2}></Col>
+                        <Col md={8}>
+                            <Row className="ml-5">
+                                <Col>
+                                    <h3>Acara Pelatihan</h3>
+                                </Col>
+                            </Row>
+                            <Row form className="ml-4 mt-2">
+                                <Col md={4}>
+                                    <FormGroup>
+                                        {/* <Input type="search"
+                                            name="searchTrainer"
+                                            id="searchTrainer"
+                                            placeholder="Cari Trainer"
+                                            className="ml-5 mb-2 mr-sm-2 mb-sm-0"/> */}
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+                            <Row className="ml-5 mt-2">
+                                {eventCard}
+                            </Row>
+                        </Col>
+                        <Col sm={2}>
+                            {/* {profileCard} */}
+                        </Col>
+                    </Row>
                     </Container>
                 </Jumbotron>
                 <Footer/>

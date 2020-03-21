@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Container, Jumbotron, Row, Col, CardImg } from 'reactstrap';
-import Header from "./Header";
 import Footer from "./Footer";
 import logo from "./img/logo.png";
 
@@ -9,7 +8,6 @@ class About extends Component {
     render() {
         return (
             <div>
-                <Header />
                 <Jumbotron fluid>
                     <Container fluid>
                         <Row>

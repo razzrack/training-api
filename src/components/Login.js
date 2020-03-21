@@ -98,7 +98,7 @@ class LoginBox extends React.Component {
     render() {
         const { error } = this.state;
         if(this.state.loggedIn){
-            return <Redirect to="/trainers" />
+            return <Redirect to="/events" />
         }
 
         return (
